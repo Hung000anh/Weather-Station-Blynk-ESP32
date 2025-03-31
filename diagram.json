@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "author": "Hùng Anh Nguyễn",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -206.36, "attrs": {} },
+      { "type": "wokwi-dht22", "id": "dht1", "top": -28.5, "left": -43.8, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "esp:GND.3", "dht1:GND", "black", [ "h28.8", "v28.8", "h76.8" ] ],
+      [ "esp:21", "dht1:SDA", "green", [ "h38.4", "v28.8", "h48" ] ],
+      [ "esp:3V3", "dht1:VCC", "green", [ "h0.15", "v-38.4", "h153.6", "v105.6", "h19.2" ] ]
+    ],
+    "dependencies": {}
+  }
